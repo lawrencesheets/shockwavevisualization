@@ -66,18 +66,18 @@ class Ball {
 class SoundWave {
   constructor(pos, op) {
     this.pos = pos;
-    this.radius = 0;
+    this.diameter = 0;
     this.opacity = op;
   }
   
   update() {
-    this.radius += Mach;
+    this.diameter += Mach*2;
   }
   
   display() {
     noFill();
     stroke(255,255,255,this.opacity);
-    circle(this.pos.x, this.pos.y, this.radius*2);
+    circle(this.pos.x, this.pos.y, this.diameter);
   }
   
 }
